@@ -1,0 +1,72 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building ModelWrapper 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ModelWrapper ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ ModelWrapper ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 26 source files to /Users/kumargan/Ganesh/Projects/Git Repo/model-wrapper/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ ModelWrapper ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/kumargan/Ganesh/Projects/Git Repo/model-wrapper/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ ModelWrapper ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ ModelWrapper ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ ModelWrapper ---
+[INFO] Building jar: /Users/kumargan/Ganesh/Projects/Git Repo/model-wrapper/target/ModelWrapper-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.5.6.RELEASE:repackage (default) @ ModelWrapper ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.823 s
+[INFO] Finished at: 2018-03-28T11:46:18+05:30
+[INFO] Final Memory: 29M/322M
+[INFO] ------------------------------------------------------------------------
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building ModelWrapper 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ModelWrapper ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ ModelWrapper ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 26 source files to /Users/kumargan/Ganesh/Projects/Git Repo/model-wrapper/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ ModelWrapper ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/kumargan/Ganesh/Projects/Git Repo/model-wrapper/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ ModelWrapper ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ ModelWrapper ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ ModelWrapper ---
+[INFO] Building jar: /Users/kumargan/Ganesh/Projects/Git Repo/model-wrapper/target/ModelWrapper-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.5.6.RELEASE:repackage (default) @ ModelWrapper ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.343 s
+[INFO] Finished at: 2018-03-28T11:46:33+05:30
+[INFO] Final Memory: 29M/323M
+[INFO] ------------------------------------------------------------------------
