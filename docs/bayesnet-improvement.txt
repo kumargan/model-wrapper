@@ -1,0 +1,63 @@
+scp ganesh@someip:/400g/ganesh/bayesNetModel_2017_July_17to23_rs.rda .
+
+docker run -d -p 8787:8787 rocker/hadleyverse
+docker cp bayesNetModel_2017_July_17to23_rs.rda 32252eff888b:/model.rda
+http://localhost:8787/
+
+r scripts :
+install.packages("bnlearn")
+library("bnlearn")
+
+load(file = "/model.rda")
+options(scipen = 999) 
+
+set.seed(1)
+cpquery(bayesNetModel, event = (country=='US' & state=='WY'), evidence = TRUE)
+
+
+cpquery(bayesNetModel, event = (country=='US' & 'brand'=='si' & age='5'), evidence = TRUE)
+cpquery(bayesNetModel, event = (country=='US' & 'brand'=='si' & age='5' & gender='male'), evidence = TRUE)
+cpquery(bayesNetModel, event = (country=='US' & 'brand'=='si' & age='5' & gender='female'), evidence = TRUE)
+cpquery(bayesNetModel, event = (country=='US' & 'brand'=='si' & age='5' & gender='unknown'), evidence = TRUE)
+
+
+start local server : 
+mvn package &&$ java -jar target/ModelWrapper-0.0.1-SNAPSHOT.jar
+
+start local docker :
+
+export AWS_ACCESS_KEY_ID=key
+export AWS_SECRET_ACCESS_KEY=secret
+sh startDocker.sh
+
+curl -X POST \
+  http://localhost:8787/rpc/console_input \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 18516361-9161-30d3-c442-b66ce5446bd6' \
+  -d '{"method":"console_input", "params":["install.packages(\"bnlearn\")\nlibrary(\"bnlearn\")\n\nload(file = \"/model.rda\")\noptions(scipen = 999)",""], "clientId":"b6123464-8693-4722-b3e6-346627399ebe", "clientVersion":"a47842ce5785ecee4b01a94249f20256375db400"}'
+
+
+{"method":"init","data":{"caption":"",".clientdata_output_value_hidden":false,".clientdata_pixelratio":2,".clientdata_url_protocol":"http:",".clientdata_url_hostname":"localhost",".clientdata_url_port":"9999",".clientdata_url_pathname":"/",".clientdata_url_search":"",".clientdata_url_hash_initial":"",".clientdata_singletons":"",".clientdata_allowDataUriScheme":true}}	
+
+{"method":"update","data":{"caption":"set.seed(1);cpquery(bayesNetModel, event = (country=='US' & state=='NY'), evidence = TRUE)"}}
+
+
+
+{
+    "types" : ["T1"],
+    "pageviews" : "107612255",
+    "options":{
+        "os":[],
+        "version":[],
+        "country":["US"],
+    	"state":[],
+    	"metro_code":[],
+    	"brand_id":[],
+    	"T1":[],
+    	"gender":[],
+    	 "age":["4","5"]
+    }
+}
+
+	
