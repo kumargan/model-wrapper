@@ -12,21 +12,21 @@ import javax.websocket.WebSocketContainer;
 import org.modelwrapper.dao.ModelDao;
 import org.springframework.util.StringUtils;
 
-@ClientEndpoint
+//@ClientEndpoint
 public class WebSocketClient {
 	private final String uri="ws://localhost:9999/websocket/";
 	private Session session;
 
 
 	public WebSocketClient(){
-		try{
-			WebSocketContainer container=ContainerProvider.
-					getWebSocketContainer();
-			container.connectToServer(this, new URI(uri));
-
-		}catch(Exception ex){
-			System.out.println(" error while opening web socket to shiney server");
-		}
+//		try{
+//			WebSocketContainer container=ContainerProvider.
+//					getWebSocketContainer();
+//			container.connectToServer(this, new URI(uri));
+//
+//		}catch(Exception ex){
+//			System.out.println(" error while opening web socket to shiney server");
+//		}
 	}
 
 	@OnOpen
