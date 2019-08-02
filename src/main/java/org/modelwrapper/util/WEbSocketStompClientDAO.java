@@ -23,7 +23,7 @@ import org.springframework.web.socket.sockjs.client.SockJsClient;
 import org.springframework.web.socket.sockjs.client.Transport;
 import org.springframework.web.socket.sockjs.client.WebSocketTransport;
 
-@Component
+//@Component
 public class WEbSocketStompClientDAO {
   private final String uri="ws://localhost:8080/greeting/";
   WebSocketClient client;
